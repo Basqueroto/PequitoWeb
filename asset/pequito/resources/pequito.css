@@ -1,0 +1,21 @@
+div#main-area div.produto div.main-produto .area-buy-product button.button {
+    background: #00a441;
+    border-color: #00a441;
+}
+
+div#main-area div.produto div.main-produto .area-buy-product button.button:hover {
+    background: #008b37;
+    border-color: #008b37;
+}
+
+/* HEADER */
+
+ul#nav-root {
+    text-transform: uppercase !important;
+}
+
+.carrinho-container .login-area {
+    width: 70% !important;
+    border: 1px solid #ff7a21 !important;
+    font-size: 18px !important;
+}
