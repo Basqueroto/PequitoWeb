@@ -719,18 +719,18 @@ Tênis, sandálias, mocassins desenvolvidos especialmente para os pequenos.">
         </section>
         <section id="mascotes">
             <div id="img-bot">
-                <img src="img/ElyePe.jpg" alt="bots">
+                <a href="https://ibb.co/3vgW9p9"><img src="https://i.ibb.co/68jb7H7/ElyePe.jpg" alt="ElyePe" border="0" /></a>
             </div> 
             <div id="info-bot">
                 <div id="info-bot-present">
                     <div class="right-txt">
-                        <h2>Fala com um dos nossos mascotes</h2>
+                        <h2>Fale com um dos nossos amigos</h2>
                     </div>
                     <div class="right-txt">
-                        <p>Aly e Pe são nossos influenciadores digitais responsáveis por escutar e desnehar tudo o que você imaginar</p>
+                        <p>Aly e Pe são nossos influenciadores digitais responsáveis por escutar e desenhar tudo o que você imaginar.</p>
                     </div>
                     <div class="right-txt">
-                        <p>Você pode conversar tanto com a aly quanto com o Pe, só basta você escolher no botão abaixo</p>
+                        <p>Você pode conversar tanto com a Aly quanto com o Pe, só basta você escolher no botão abaixo.</p>
                     </div>
                 </div>
                 <div id="bot-present-switch">
@@ -756,6 +756,10 @@ Tênis, sandálias, mocassins desenvolvidos especialmente para os pequenos.">
         <style>
             * {
                 transition: 0.5s;
+            }
+
+            #img-bot img{
+                width: 100%;
             }
 
             #vender {
@@ -967,6 +971,10 @@ Tênis, sandálias, mocassins desenvolvidos especialmente para os pequenos.">
                 font-size: 40px;
             }
 
+            #img-bot {
+                background-color: var(--cor-base);
+            }
+
         </style>
 
         <script>
@@ -998,6 +1006,7 @@ Tênis, sandálias, mocassins desenvolvidos especialmente para os pequenos.">
             var title = document.getElementById('title-bot')
             var line = document.getElementById('bot-title')
             var bot = document.getElementById('bot-link')
+            var tx = document.getElementById('info-bot')
             var colorRose = 'rgb(217, 0, 217)'
             var colorOrange = '#FF7A21'
             var princeColor = '#FF7A21'
@@ -1009,12 +1018,15 @@ Tênis, sandálias, mocassins desenvolvidos especialmente para os pequenos.">
                     title.style.color = colorOrange 
                     line.style.borderBottom = '3px solid ' + colorOrange
                     bot.src = linkPe
-
+                    document.body.style.setProperty('--cor-base', colorOrange);
+                    tx.style.color = colorOrange
                 }
                 else {
                     title.style.color = colorRose 
                     line.style.borderBottom = '3px solid ' + colorRose
                     bot.src = linkAly
+                    document.body.style.setProperty('--cor-base', colorRose);
+                    tx.style.color = colorRose
                 }
 
 
