@@ -717,11 +717,39 @@ Tênis, sandálias, mocassins desenvolvidos especialmente para os pequenos.">
                 <img src="https://image.pollinations.ai/prompt/um tenis infatil em um fundo branco visto lateralmente o tenis deve seguir as caracteristicas a seguir camaro amarelo o tenis deve ser infantil considere todas as cores escritas e defina o tamanho pequeno para o tenis no pe de uma crianca" alt="geração do produto">
             </div>
         </section>
+        <section id="mascotes">
+            <div id="img-bot">
+                <img src="" alt="bots">
+            </div> 
+            <div id="info-bot">
+                <div id="info-bot-present">
+                    <div class="right-txt">
+                        <h2>Fala com um dos nossos mascotes</h2>
+                    </div>
+                    <div class="right-txt">
+                        <p>Aly e Pe são nossos influenciadores digitais responsáveis por escutar e desnehar tudo o que você imaginar</p>
+                    </div>
+                    <div class="right-txt">
+                        <p>Você pode conversar tanto com a aly quanto com o Pe, só basta você escolher no botão abaixo</p>
+                    </div>
+                </div>
+                <div id="bot-present-switch">
+                    <input type="checkbox" name="check-toggle" id="checkbox" hidden="">
+                    <label for="checkbox" class="toggle" id="chequer">
+                    Pe
+                    <div class="toggle__switch">
+                        <div class="toggle__circle"></div>
+                    </div>
+                    Aly
+                    </label>
+                </div>
+            </div>
+        </section>
         <section id="bot">
             <div id="bot-title">
-                <p data-anime="right">Inventora de Sapatos</p>
+                <p data-anime="right" id="title-bot">Inventora de Sapatos</p>
             </div>
-            <!DOCTYPE html><html><body><iframe src="https://web.powerva.microsoft.com/environments/Default-b1051c4b-3b94-41ab-9441-e73a72342fdd/bots/cr6ae_testD/webchat?__version__=2" frameborder="0" style="width: 100%; height: 500px;"></iframe></body></html>
+            <!DOCTYPE html><html><body><iframe id="bot-link" src="https://web.powerva.microsoft.com/environments/Default-b1051c4b-3b94-41ab-9441-e73a72342fdd/bots/cr6ae_testD/webchat?__version__=2" frameborder="0" style="width: 100%; height: 700px;"></iframe></body></html>
         </section>
         <section id="prove seus sonhos"></section>
 
@@ -747,6 +775,8 @@ Tênis, sandálias, mocassins desenvolvidos especialmente para os pequenos.">
             #present {
                 display: grid;
                 grid-template-columns: 2fr 2fr;
+                height: 400px;
+                overflow-y: hidden;
             }
 
             #apresent {
@@ -837,6 +867,101 @@ Tênis, sandálias, mocassins desenvolvidos especialmente para os pequenos.">
                 transform: translate3d(0px, 0px, 0px);
             }
 
+            /* switch */
+
+            .toggle {
+            display: flex;
+            align-items: center;
+            gap: .2rem;
+            font-weight: 900;
+            font-size: 2rem;
+            color: var(--cor-secundaria);
+            text-shadow: 0 0 2px #e8e8e8;
+            }
+
+            .toggle__switch {
+            --bg-toggle: var(--cor-base);
+            --bg-circle: white;
+            --w-toggle-switch: 150px;
+            --w-h-toggle-circle: 35px;
+            --pd-toggle-switch: .5rem;
+            height: 55px;
+            width: var(--w-toggle-switch);
+            background-color: var(--bg-toggle);
+            border-radius: 4rem;
+            display: flex;
+            align-items: center;
+            padding: 0 var(--pd-toggle-switch);
+            cursor: pointer;
+            transition: background-color 500ms;
+            }
+
+            .toggle__circle {
+            width: var(--w-h-toggle-circle);
+            height: var(--w-h-toggle-circle);
+            background-color: var(--bg-circle);
+            border-radius: 50%;
+            transition: margin 400ms ease-in-out, background-color 1000ms;
+            }
+
+            #checkbox:checked + .toggle .toggle__circle {
+            margin-left: calc(var(--w-toggle-switch) - (var(--pd-toggle-switch) * 2) - var(--w-h-toggle-circle));
+            }
+
+            #checkbox:checked + .toggle > .toggle__switch {
+            --bg-toggle: rgb(217, 0, 217);
+            --bg-circle: hsl(0, 0%, 96%);
+            box-shadow: 0 .3rem 5rem 0 hsla(96, 85%, 34%, 30%);
+            }
+
+            /* swicth */
+
+            #mascotes {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            #img-bot {
+                width: 100%;
+            }
+
+            #info-bot {
+                border-top: 4px solid var(--cor-base);
+                border-left: 4px solid var(--cor-base);
+                color: var(--cor-base);
+            }
+
+            #info-bot h2 {
+                margin-right: 25px;
+                margin-top: 20px;
+                font-size: 35px;
+                margin-bottom: 25px;
+                border-bottom: var(--cor-base) solid 3px;
+            }
+
+            #info-bot-present {
+               display: grid;
+               grid-template-rows: 1fr 1fr 1fr;
+            }
+
+            .right-txt {
+                display: flex;
+                justify-content: right;
+            }
+
+            #info-bot-present p{
+                margin-right: 25px;
+                width: 80%;
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+
+            #bot-present-switch {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
         </style>
 
         <script>
@@ -861,6 +986,38 @@ Tênis, sandálias, mocassins desenvolvidos especialmente para os pequenos.">
                 animeScroll()
                 initVid()
             })
+
+            // func trocar bot
+            var chequer = document.getElementById('checkbox')
+            var che = document.getElementById('chequer')
+            var title = document.getElementById('title-bot')
+            var line = document.getElementById('bot-title')
+            var bot = document.getElementById('bot-link')
+            var colorRose = 'rgb(217, 0, 217)'
+            var colorOrange = '#FF7A21'
+            var princeColor = '#FF7A21'
+            var linkPe = 'https://web.powerva.microsoft.com/environments/Default-b1051c4b-3b94-41ab-9441-e73a72342fdd/bots/cr6ae_testD/webchat?__version__=2'
+            var linkAly = 'https://web.powerva.microsoft.com/environments/Default-b1051c4b-3b94-41ab-9441-e73a72342fdd/bots/cr6ae_aly/webchat?__version__=2'
+
+            function alterar () {
+                if (chequer.checked) {
+                    title.style.color = colorOrange 
+                    line.style.borderBottom = '3px solid ' + colorOrange
+                    bot.src = linkPe
+
+                }
+                else {
+                    title.style.color = colorRose 
+                    line.style.borderBottom = '3px solid ' + colorRose
+                    bot.src = linkAly
+                }
+
+
+            }
+
+            che.addEventListener('click', () => {alterar()})
+
+
         </script>
     </main>
 </body>
