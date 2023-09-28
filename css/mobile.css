@@ -11,6 +11,8 @@
     }
 }
 
-@media (max-width:1060px) {
-
+@media(max-width: 992px) {
+    #headerdiv{
+        flex-direction: column;
+    }
 }
