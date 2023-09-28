@@ -1,0 +1,16 @@
+@media (max-width:1121px) {
+    #img img{
+        overflow-x: hidden;
+        width: 120%;
+    }
+}
+@media (max-width:1070px) {
+    #img img{
+        overflow-x: hidden;
+        width: 150%;
+    }
+}
+
+@media (max-width:1060px) {
+
+}
