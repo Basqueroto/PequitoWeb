@@ -128,6 +128,44 @@ Tênis, sandálias, mocassins desenvolvidos especialmente para os pequenos.">
                     background-position: 2500% 0
                 }
             }
+
+            @media (max-width:1121px) {
+                #img img{
+                    overflow-x: hidden;
+                    width: 120%;
+                }
+            }
+            @media (max-width:1070px) {
+                #img img{
+                    overflow-x: hidden;
+                    width: 150%;
+                }
+            }
+
+            @media(max-width: 992px) {
+                #headerdiv{
+                    justify-content: space-around;
+                }
+                #frm-search{
+                    display: none;
+                }
+                .item-ctn{
+                    display: none;
+                }
+                .icon{
+                    display: none;
+                }
+                .social-pesquisa-container{
+                    display: none;
+                }
+                .carrinho-container .login-area{
+                    margin-right: 0%;
+                    width: 90% !important;
+                }
+                .carrinho-container .login-area .icon-user {
+                    display: none;
+                }
+            } 
         </style>
         <script type="text/javascript" src="https://public-resources.cdn.magazord.com.br/libs/jquery-3.5.1.min.js"></script>
         <script type="text/javascript" src="https://public-resources.cdn.magazord.com.br/libs/swiper-bundle-v10.2.1.min.js"></script>
@@ -859,6 +897,52 @@ Tênis, sandálias, mocassins desenvolvidos especialmente para os pequenos.">
                         transform: translateX(0);
                     }
                 } */
+
+                @media (max-width: 1025px) {
+                    #dis {
+                        display: block;
+                    }
+
+                    #title {
+                        justify-content: center;
+                        margin-left: 0;
+                    }
+
+                    #info-market p {
+
+                        width: 500px;
+                    }
+
+                    #ir {
+                        justify-content: center;
+                    }
+
+                    #vid-bot {
+                        justify-content: center;
+                        width: 100%;
+                    }
+                }
+
+                @media (max-width: 551px) {
+                    #title p {
+                        font-size: 30px;
+                    }
+
+                    #info-market p {
+                        font-size: 20px;
+                        width: 80%;
+                    }
+                }
+
+                @media (max-width: 354px) {
+                    #title p {
+                        font-size: 25px;
+                    }
+
+                    #info-market p {
+                        font-size: 17px;
+                    }
+                }
 
             </style>
 
